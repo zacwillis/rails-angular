@@ -1,0 +1,16 @@
+<nav>
+  <ul class="pagination">
+    <% if page > 0 %>
+      <li class="page-item">
+        <%= link_to "Previous".html_safe, 
+              customers_path(keywords: keywords, page: page - 1),
+              title: "Previous Page", class: "page-link" %>
+      </li>
+    <% end %>
+    <li class="page-item">
+      <%= link_to "Next".html_safe, 
+            customers_path(keywords: keywords, page: page + 1),
+            title: "Next Page", class: "page-link" %>
+    </li>
+  </ul>
+</nav>
